@@ -1,3 +1,5 @@
+import eldenRing from "../img/banner.png";
+
 function Main() {
   return (
     <>
@@ -12,7 +14,7 @@ function Main() {
       </nav>
       <article>
         <h2>The Best 5 Open World Adventure Games</h2>
-        <img src="img/banner.png" alt="article banner" />
+        <img src={eldenRing} alt="article banner" />
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptas
           eligendi maiores beatae eius, odit aperiam, pariatur tenetur sequi
