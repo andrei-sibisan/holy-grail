@@ -1,13 +1,15 @@
 import * as React from "react";
-import Counter from "./components/Counter";
-import { Greeting } from "./components/Greeting";
+import "./styles.css";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Main from "./components/Main";
 
 export default function App() {
-  const path = window.location.pathname.split("/")[1];
   return (
-    <>
-      {path === "counter" && <Counter />}
-      {path === "greeting" && <Greeting />}
-    </>
+    <div className="grid-container">
+      <Footer />
+      <Header />
+      <Main />
+    </div>
   );
 }
