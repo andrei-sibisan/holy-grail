@@ -1,18 +1,7 @@
-import eldenRing from "../img/banner.png";
-
-function Main() {
-  return (
-    <>
-      <nav>
-        <p>Categories</p>
-        <li>Film & Cinema</li>
-        <li>Books & Reading</li>
-        <li>Games & Consoles</li>
-        <li>Food & Drink</li>
-        <li>World News</li>
-        <li>Outdoor Living</li>
-      </nav>
-      <article>
+import eldenRing from "../../img/banner.png";
+function Article() {
+    return ( 
+        <article>
         <h2>The Best 5 Open World Adventure Games</h2>
         <img src={eldenRing} alt="article banner" />
         <p>
@@ -42,30 +31,7 @@ function Main() {
           explicabo incidunt!
         </p>
       </article>
-      <aside>
-        <ul>
-          <li>
-            <p>
-              <strong>Published on:</strong>
-            </p>
-            <p>May 15th 2022</p>
-          </li>
-          <li>
-            <p>
-              <strong>In the category:</strong>
-            </p>
-            <p>Games & Consoles</p>
-          </li>
-          <li>
-            <p>
-              <strong>Writted by:</strong>
-            </p>
-            <p>Mario</p>
-          </li>
-        </ul>
-      </aside>
-    </>
-  );
+     );
 }
 
-export default Main;
+export default Article;
