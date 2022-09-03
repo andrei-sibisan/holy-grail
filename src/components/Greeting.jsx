@@ -4,7 +4,7 @@ export default function Greeting() {
   return (
     <>
       <input onChange={(text) => setName(text.target.value)} />
-      <span>Salut, {name}</span>
+      {Boolean(name.length) && <span>Salut, {name}</span>}
     </>
   );
 }
