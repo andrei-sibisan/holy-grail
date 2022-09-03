@@ -1,5 +1,6 @@
-function App() {
-  return "hello world";
+export default function App() {
+  return <HelloWorld />;
 }
-
-export default App;
+function HelloWorld() {
+  return "Hello World!!";
+}
