@@ -1,6 +1,6 @@
-import * as React from "react";
-export default function Greeting() {
-  const [name, setName] = React.useState("");
+import React, { useState, useEffect } from "react";
+export function Greeting() {
+  const [name, setName] = useState("");
   return (
     <>
       <input onChange={(text) => setName(text.target.value)} />
