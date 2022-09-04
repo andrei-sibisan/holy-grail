@@ -14,8 +14,11 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/:categoryId" element={<Articles />} />
+        <Route path="/" element={<Home allCategories={categories}/>} />
+        <Route
+          path="/:categoryId"
+          element={<Articles allCategories={categories} />}
+        />
       </Routes>
     </BrowserRouter>
   );
