@@ -3,12 +3,13 @@ import { useLocation } from "react-router-dom";
 import Article from "../components/Main/Article";
 import eldenRing from "../img/banner.png";
 
-function Articles() {
+export default function Articles() {
   //apelam functia useLocation care ne returneaza varibila searchParams care contine
   //informatii legate de query string
   //tot ce se scrie cu use, in react este un Hook
   const searchParams = useLocation();
   const categoryId = searchParams.pathname.split("/")[1];
+  console.log(categoryId);
   const categories = [
     { id: 1, name: "Books" },
     { id: 2, name: "Films" },
@@ -19,6 +20,7 @@ function Articles() {
     //categort.id este tip number si trebuie convertit in tip string pentru a fi egal cu CategoryId
     //care este de tip string
   );
+  console.log(category);
   const categoryName = category?.name;
   const articles = [
     {
@@ -53,7 +55,7 @@ function Articles() {
   const filteredArticles = articles.filter(
     (article) => article.category === categoryName?.toLowerCase()
   );
-  return (
+  return Boolean(category) ? (
     <div>
       {filteredArticles.map((article) => (
         <Article
@@ -63,7 +65,15 @@ function Articles() {
         />
       ))}
     </div>
+  ) : (
+    <div>
+      {articles.map((article) => (
+        <Article
+          title={article.title}
+          thumb={article.thumb}
+          content={article.content}
+        />
+      ))}
+    </div>
   );
 }
-
-export default Articles;
