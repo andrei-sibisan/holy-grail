@@ -1,13 +1,18 @@
 function Nav() {
+  const categories = [
+    "Film & Cinema",
+    "Books & Reading",
+    "Games & Consoles",
+    "Food & Drink",
+    "World News",
+    "Outdoor Living",
+  ];
   return (
     <nav>
       <p>Categories</p>
-      <li>Film & Cinema</li>
-      <li>Books & Reading</li>
-      <li>Games & Consoles</li>
-      <li>Food & Drink</li>
-      <li>World News</li>
-      <li>Outdoor Living</li>
+      {categories.map((category) => (
+        <li>{category}</li>
+      ))}
     </nav>
   );
 }
