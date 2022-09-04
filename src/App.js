@@ -5,20 +5,14 @@ import "./styles.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Main from "./components/Main";
+import Home from "./views/Home";
 
 export default function App() {
-  const homeView = (
-    <div className="grid-container">
-      <Header />
-      <Main />
-      <Footer />
-    </div>
-  );
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={homeView} />
-        <Route path="contact" element={homeView} />
+        <Route path="/" element={<Home />} />
+        <Route path="contact" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
